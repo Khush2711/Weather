@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accurate Weather Forecast | Live Weather Updates</title>
+        <link rel="shortcut icon" href="./assets/favi.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+        <meta name="description" content="Get live weather updates for your location and any city worldwide. Check temperature, windspeed, humidity, and cloud coverage.">
+        <meta name="keywords" content="weather, live weather updates, current temperature, city weather, windspeed, humidity, cloud coverage, weather forecast, local weather, real-time weather, weather conditions, global weather, weather alerts, weather radar, weather map, weather predictions, hourly weather, daily weather, weekly weather, meteorology, climate, weather information, weather news, weather report, temperature updates, wind speed, humidity levels, cloudiness, precipitation, storm alerts, rain forecast, snowfall forecast, weather monitoring, weather app, weather website, interactive weather, weather widgets, weather data, accurate weather, reliable weather, weather services, city weather forecast, national weather, international weather, weather trends, climate change, seasonal weather, severe weather, weather warnings, weather insights, live weather data, weather API, personalized weather, user location weather, forecast updates, weather station, detailed weather, weather analytics">
+        <meta name="author" content="Your Name">
+        <meta property="og:title" content="Accurate Weather Forecast | Live Weather Updates">
+        <meta property="og:description" content="Stay informed with live weather updates for your location and other cities. View temperature, windspeed, humidity, and cloud data with country flags.">
+        <meta property="og:image" content="URL to a representative image of your site">
+        <meta property="og:url" content="URL of your website">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Accurate Weather Forecast | Live Weather Updates">
+        <meta name="twitter:description" content="Get live weather updates for your location and any city worldwide. Check temperature, windspeed, humidity, and cloud coverage.">
+        <meta name="twitter:image" content="URL to a representative image of your site">
+    </head>
+    
+</head>
+
+<body>
+
+    <section>
+        <div class="container">
+
+            <h1>Weather App</h1>
+
+            <!-- Tab switch container -->
+            <div class="tab-container">
+                <div class="tab" data-userWeather>Your Weather</div>
+                <div class="tab" data-searchWeather>Search Weather</div>
+            </div>
+
+            <div class="weather-container">
+                <!-- Location Container -->
+                <div class="grant-location-container" data-location>
+                    <img src="./assets/location.png" alt="" width="80" height="80" loading="lazy">
+                    <p class="title">Grant Location Access</p>
+                    <p class="subtitle">Allow Access To Get Weather Information</p>
+                    <div>
+                        <button class="grantBtn" data-grantAccess>
+                            GRANT ACCESS
+                        </button>
+                    </div>
+                </div>
+
+                <!-- search container -->
+                <form class="search-container" data-searchForm>
+                    <input type="text" placeholder="Seach for city..." data-searchInput>
+                    <button class="searchBtn">
+                        <img loading="lazy" src="./assets/search.png" alt="" width="20" height="20">
+                    </button>
+                </form>
+
+                <!-- loading container -->
+                <div class="loading-container">
+                    <img src="./assets/loading.gif" alt="" width="150" height="150" loading="lazy">
+                    <p>Loading</p>
+                </div>
+
+                <!-- user weather info -->
+                <div class="user-weather-info">
+                    <div class="name">
+                        <p data-cityName></p>
+                        <img loading="lazy" data-countryFlag width="30px" height="30px">
+                    </div>
+
+                    <div class="temperature-container">
+                        <p data-weatherDescription></p>
+                        <img loading="lazy" data-weatherIcon height="90" width="90">
+                        <p class="temp-text" data-temp></p>
+                    </div>
+
+                    <div class="extra-info-containter">
+                        <!-- Wind -->
+                        <div class="card">
+                            <img loading="lazy" src="./assets/wind.png" alt="">
+                            <p>Windspeed</p>
+                            <p data-windSpeed></p>
+                        </div>
+
+                        <!-- Humidity -->
+                        <div class="card">
+                            <img loading="lazy" src="./assets/humidity.png" alt="">
+                            <p>Humidity</p>
+                            <p data-humidity></p>
+                        </div>
+
+                        <!-- Clouds -->
+                        <div class="card">
+                            <img loading="lazy" src="./assets/cloud.png" alt="">
+                            <p>Clouds</p>
+                            <p data-cloud></p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="error-container" data-errorContainer>
+                    <img loading="lazy" src="./assets/not-found.png" alt="not-found" loading="lazy">
+                    <p>city not found</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
